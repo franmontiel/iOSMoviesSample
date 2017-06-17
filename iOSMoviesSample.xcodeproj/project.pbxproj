@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24309CFA1EF4B5F400A55024 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24309CF81EF4B5F400A55024 /* Localizable.strings */; };
 		24CD5F271EF4A2FD00B60D64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CD5F261EF4A2FD00B60D64 /* AppDelegate.swift */; };
 		24CD5F291EF4A2FD00B60D64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CD5F281EF4A2FD00B60D64 /* ViewController.swift */; };
 		24CD5F2C1EF4A2FD00B60D64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24CD5F2A1EF4A2FD00B60D64 /* Main.storyboard */; };
@@ -35,6 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24309CF91EF4B5F400A55024 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		24309CFD1EF4B67A00A55024 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		24309CFE1EF4B68C00A55024 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		24309D001EF4B78C00A55024 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		24CD5F231EF4A2FD00B60D64 /* iOSMoviesSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSMoviesSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24CD5F261EF4A2FD00B60D64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24CD5F281EF4A2FD00B60D64 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +111,7 @@
 				24CD5F321EF4A2FD00B60D64 /* LaunchScreen.storyboard */,
 				24CD5F351EF4A2FD00B60D64 /* Info.plist */,
 				24CD5F2D1EF4A2FD00B60D64 /* iOSMoviesSample.xcdatamodeld */,
+				24309CF81EF4B5F400A55024 /* Localizable.strings */,
 			);
 			path = iOSMoviesSample;
 			sourceTree = "<group>";
@@ -220,6 +226,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 24CD5F1A1EF4A2FD00B60D64;
 			productRefGroup = 24CD5F241EF4A2FD00B60D64 /* Products */;
@@ -239,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24CD5F341EF4A2FD00B60D64 /* LaunchScreen.storyboard in Resources */,
+				24309CFA1EF4B5F400A55024 /* Localizable.strings in Resources */,
 				24CD5F311EF4A2FD00B60D64 /* Assets.xcassets in Resources */,
 				24CD5F2C1EF4A2FD00B60D64 /* Main.storyboard in Resources */,
 			);
@@ -303,10 +311,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		24309CF81EF4B5F400A55024 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24309CF91EF4B5F400A55024 /* Base */,
+				24309CFE1EF4B68C00A55024 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		24CD5F2A1EF4A2FD00B60D64 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				24CD5F2B1EF4A2FD00B60D64 /* Base */,
+				24309D001EF4B78C00A55024 /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -315,6 +333,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				24CD5F331EF4A2FD00B60D64 /* Base */,
+				24309CFD1EF4B67A00A55024 /* es */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -326,6 +345,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -377,6 +397,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -520,6 +541,7 @@
 				24CD5F501EF4A2FD00B60D64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		24CD5F511EF4A2FD00B60D64 /* Build configuration list for PBXNativeTarget "iOSMoviesSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +550,7 @@
 				24CD5F531EF4A2FD00B60D64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		24CD5F541EF4A2FD00B60D64 /* Build configuration list for PBXNativeTarget "iOSMoviesSampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +559,7 @@
 				24CD5F561EF4A2FD00B60D64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
