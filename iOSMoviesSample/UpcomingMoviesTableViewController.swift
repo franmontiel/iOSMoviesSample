@@ -10,10 +10,11 @@ import UIKit
 
 class UpcomingMoviesTableViewController: UITableViewController {
 
-    let movies = [
-        Movie(id: 0, title: "Movie1", overview: "Description1", poster: URL(string: "http://invent.com")!),
-        Movie(id: 1, title: "Movie2", overview: "Description2", poster: URL(string: "http://invent.com")!)
-    ]
+    var movies = [Movie]() {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,18 @@ class UpcomingMoviesTableViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        ApiMovieDataSource.getUpconming { [weak self] result in
+            switch result {
+            case .success(let data):
+                self?.movies.append(contentsOf: data)
+            case .failure:
+                break
+                // TODO show error
+            }
+        }
     }
 
     // MARK: - Table view data source
@@ -45,7 +58,7 @@ class UpcomingMoviesTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Movie", for: indexPath)
 
         let movie = movies[indexPath.row]
-        
+
         // Configure the cell...
         cell.textLabel?.text = movie.title
         cell.detailTextLabel?.text = movie.overview

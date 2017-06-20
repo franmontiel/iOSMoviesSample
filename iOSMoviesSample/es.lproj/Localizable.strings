@@ -5,3 +5,6 @@
   Created by fj on 17/06/2017.
   Copyright © 2017 Spiral Apps. All rights reserved.
 */
+"Generic Error" = "Ha ocurrido un error";
+"Network Error" = "Problemas con la conexión";
+"Retry" = "Retry";
