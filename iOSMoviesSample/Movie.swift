@@ -14,7 +14,14 @@ struct Movie {
     var id: Int
     var title: String
     var overview: String?
-    var poster: String?
+    fileprivate var posterPath: String?
+    var posterUrl: String? {
+        get {
+            guard posterPath != nil else { return nil }
+            
+            return "https://image.tmdb.org/t/p/w500/\(posterPath!)"
+        }
+    }
 }
 
 // Using an extension will allow me to not lose the default init
@@ -32,7 +39,7 @@ extension Movie: Mappable {
         id <- map["id"]
         title <- map["title"]
         overview <- map["overview"]
-        poster <- map["poster_path"]
+        posterPath <- map["poster_path"]
     }
 
 }

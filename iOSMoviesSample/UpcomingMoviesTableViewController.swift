@@ -32,15 +32,31 @@ class UpcomingMoviesTableViewController: UITableViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
+        loadUpcoming()
+    }
+
+    private func loadUpcoming() {
         ApiMovieDataSource.getUpconming { [weak self] result in
             switch result {
             case .success(let data):
                 self?.movies.append(contentsOf: data)
             case .failure:
-                break
-                // TODO show error
+                self?.showError(message: R.string.commons.errorGeneric(), retryWith: self?.loadUpcoming)
             }
         }
+    }
+
+    private func showError(message: String, retryWith: (() -> Void)?) {
+        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+
+        if let retryWith = retryWith {
+            let retryAction = UIAlertAction(title: "Retry", style: .default, handler: { _ in
+                retryWith()
+            })
+            alertController.addAction(retryAction)
+        }
+
+        self.present(alertController, animated: true, completion: nil)
     }
 
     // MARK: - Table view data source
@@ -110,5 +126,4 @@ class UpcomingMoviesTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

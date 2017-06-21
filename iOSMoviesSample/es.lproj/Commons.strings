@@ -1,0 +1,11 @@
+/* 
+  Commons.strings
+  iOSMoviesSample
+
+  Created by fj on 21/06/2017.
+  Copyright © 2017 Spiral Apps. All rights reserved.
+*/
+"error.generic" = "Ha ocurrido un error";
+"error.network" = "Problemas con la conexión";
+
+"retry" = "Reintentar";

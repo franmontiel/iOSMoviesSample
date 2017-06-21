@@ -27,10 +27,13 @@ class ApiMovieDataSource: ApiDataSource {
                     }
 
                 case .failure(let error):
-                    print(error)
-                    // TODO handle errors
+                    // TODO error handling
                     if ApiMovieDataSource.isNetworkReachable() {
                     }
+                    
+                    callback(Result(error: ApiError.GenericError))
+
+                  
                 }
             })
 
